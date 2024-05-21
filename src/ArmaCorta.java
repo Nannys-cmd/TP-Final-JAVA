@@ -11,9 +11,8 @@ public class ArmaCorta extends Arma {
         return esAutomatica;
     }
 
-    // Implementación del método abstracto para verificar si el arma corta puede disparar a más de 200 metros
-    @Override
-    public boolean esDisparableALargaDistancia() {
+    // Método para verificar si el arma puede disparar a más de 200 metros
+    public boolean puedeDispararALargaDistancia() {
         return getAlcanceMetros() > 200;
     }
 
@@ -26,4 +25,3 @@ public class ArmaCorta extends Arma {
                 '}';
     }
 }
-

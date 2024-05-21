@@ -9,10 +9,12 @@ public class Main {
     public static void main(String[] args) {
         // Crear objetos de prueba
         Policia policia1 = new Policia("Juan", "Perez", 1234);
-        Policia policia2 = new Policia("Ana", "Gomez", 5678);
+        Policia policia2 = new Policia("Sabina", "Gomez", 5678);
+        Policia policia3 = new Policia("Luis", "Martinez", 9012); // Nuevo policía agregado
 
         policias.add(policia1);
         policias.add(policia2);
+        policias.add(policia3); // Agregar el nuevo policía a la lista
 
         ArmaCorta armaCorta = new ArmaCorta(policia1, 15, 250, "Glock", 9, "EN USO", true);
         ArmaLarga armaLarga1 = new ArmaLarga(policia2, 30, 500, "Remington", 12, "EN USO", true, "Uso táctico", 4);
@@ -53,3 +55,4 @@ public class Main {
         System.out.println("No se encontró un arma para el policía con el tipo especificado.");
     }
 }
+

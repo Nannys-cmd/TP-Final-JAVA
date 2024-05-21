@@ -11,26 +11,9 @@ public class ArmaLarga extends Arma implements Comparable<ArmaLarga> {
         this.nivel = nivel;
     }
 
-    // Getters
-    public boolean isTieneSelloRENAR() {
-        return tieneSelloRENAR;
-    }
+    // Métodos getters y setters para los campos adicionales
 
-    public String getDescripcionUso() {
-        return descripcionUso;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    // Implementación del método abstracto para verificar si el arma larga puede disparar a larga distancia
-    @Override
-    public boolean esDisparableALargaDistancia() {
-        return true; // Suponemos que todas las armas largas pueden disparar a larga distancia
-    }
-
-    // Implementación del método compareTo para comparar dos armas largas por nivel
+    // Implementación del método compareTo para comparar dos armas largas
     @Override
     public int compareTo(ArmaLarga otraArma) {
         return Integer.compare(this.nivel, otraArma.nivel);
@@ -47,4 +30,3 @@ public class ArmaLarga extends Arma implements Comparable<ArmaLarga> {
                 '}';
     }
 }
-
