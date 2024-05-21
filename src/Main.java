@@ -23,13 +23,16 @@ public class Main {
         armas.add(armaLarga2);
 
         // Interactuar con el usuario
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el nombre del policía: ");
-        String nombrePolicia = scanner.nextLine();
-        System.out.print("Ingrese el tipo de arma (Corta/Larga): ");
-        String tipoArma = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese el nombre del policía: ");
+            String nombrePolicia = scanner.nextLine();
+            System.out.print("Ingrese el tipo de arma (Corta/Larga): ");
+            String tipoArma = scanner.nextLine();
 
-        buscarYMostrarArma(nombrePolicia, tipoArma);
+            buscarYMostrarArma(nombrePolicia, tipoArma);
+        } catch (Exception e) {
+            System.out.println("Ocurrió un error: " + e.getMessage());
+        }
     }
 
     private static void buscarYMostrarArma(String nombrePolicia, String tipoArma) {
@@ -50,4 +53,3 @@ public class Main {
         System.out.println("No se encontró un arma para el policía con el tipo especificado.");
     }
 }
-

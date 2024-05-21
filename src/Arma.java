@@ -1,4 +1,4 @@
-public class Arma {
+public abstract class Arma {
     private Policia policia;
     private int cantidadMuniciones;
     private int alcanceMetros;
@@ -38,8 +38,11 @@ public class Arma {
 
     // Método para verificar si el arma está en condiciones de uso
     public boolean estaEnCondiciones() {
-        return "EN USO" .equals(estado) && calibre >= 9;
+        return "EN USO".equals(estado) && calibre >= 9;
     }
+
+    // Método abstracto para verificar si el arma puede disparar a larga distancia
+    public abstract boolean esDisparableALargaDistancia();
 
     // Método toString para imprimir los detalles del arma
     @Override
@@ -54,3 +57,4 @@ public class Arma {
                 '}';
     }
 }
+

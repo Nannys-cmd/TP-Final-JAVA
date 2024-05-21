@@ -10,7 +10,7 @@ public class Policia {
         this.legajo = legajo;
     }
 
-    // Getter
+    // Getters
     public String getNombre() {
         return nombre;
     }
@@ -30,5 +30,4 @@ public class Policia {
                 ", legajo=" + legajo +
                 '}';
     }
-
 }
